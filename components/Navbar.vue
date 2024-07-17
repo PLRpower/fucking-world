@@ -4,18 +4,18 @@
 
 <template>
   <nav>
-    <ul class="flex gap-x-4 w-full justify-center text-xl mt-4">
+    <ul class="flex gap-x-4 w-full justify-center text-xl mt-4 sticky">
       <li>
-        <nuxt-link to="/">Accueil</nuxt-link>
+        <nuxt-link to="/" class="hover:opacity-70 transition ease-in-out">Accueil</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/infos">Infos</nuxt-link>
+        <nuxt-link to="#" class="hover:opacity-70 transition ease-in-out">Infos</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/about">Réservation</nuxt-link>
+        <nuxt-link to="#" class="hover:opacity-70 transition ease-in-out">Réservation</nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/">Réservation</nuxt-link>
+        <nuxt-link to="#" class="hover:opacity-70 transition ease-in-out">Réservation</nuxt-link>
       </li>
     </ul>
   </nav>

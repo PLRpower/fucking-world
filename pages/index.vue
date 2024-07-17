@@ -1,29 +1,110 @@
-<script setup>
+<script>
+export default {
+  mounted() {
+    const words = document.querySelectorAll('.slide-word');
+    let currentIndex = 0;
 
+    words[currentIndex].classList.add('show');
+
+    setInterval(() => {
+      words[currentIndex].classList.remove('show');
+      words[currentIndex].classList.add('hide');
+      words[(currentIndex + 2) % words.length].classList.remove('hide');
+
+
+      currentIndex = (currentIndex + 1) % words.length;
+
+      words[currentIndex].classList.remove('hide');
+      words[currentIndex].classList.add('show');
+
+    }, 2000);
+  }
+}
 </script>
 
 <template>
-  <h1 id="random" class="mt-24 text-5xl text-center lg:text-9xl">F*cking World</h1>
+  <h1 id="random" class="mt-24 text-5xl text-center lg:text-9xl">F*cking<br/>World</h1>
   <h3 class="text-3xl text-center lg:text-5xl">09.10.24</h3>
   <Button icon="mingcute:ticket-fill" link="https://google.com" class="m-auto mt-16 lg:text-xl">
     Get your tickets
   </Button>
-  <div style="height: 300px">
-    <img src="/assets/img/eclipse.png" alt="Eclipse" class="eclipse-image -z-10 absolute">
+  <div style="position: absolute; top:0; width: 100%">
+    <img src="/public/img/eclipse.png" alt="Eclipse" class="eclipse-image -z-10 absolute">
   </div>
-  <h2 class="text-center text-3xl">Event by</h2>
-  <div class="flex flex-col justify-center items-center mt-4 gap-2">
+
+  <div class="flex flex-col justify-center items-center mt-4 gap-4">
+    <h2 class="text-center text-3xl mt-48">Events by</h2>
     <p class="flex w-fit items-center">
       <Icon name="ph:disco-ball-fill" class="text-3xl me-2"/>
       Climate Change(s)
     </p>
-    <img src="assets/img/kooma.png" alt="Kooma" class="h-12">
+    <img src="/public/img/kooma.png" alt="Kooma" class="h-12">
     <p>Fluo</p>
+  </div>
+
+  <div class="my-24">
+    <div class="max-w-3xl mx-auto text-4xl font-variant flex">
+      <p class="me-2">F*ck</p>
+      <div class="slide-container">
+        <span class="slide-word">this</span>
+        <span class="slide-word">that</span>
+        <span class="slide-word">you</span>
+        <span class="slide-word">the F*cking world</span>
+        <span class="slide-word">off … and dance!</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="lg:flex my-24 gap-x-4 mb-4 text-5xl">
+    <div class="basis-1/2 flex flex-col gap-y-4 mb-4 lg:mb-0">
+      <MainImage letter="F">
+        <img src="/public/img/2.webp" alt="2">
+      </MainImage>
+      <MainImage letter="C">
+        <img src="/public/img/4.webp" alt="2">
+      </MainImage>
+      <MainImage letter="I">
+        <img src="/public/img/6.webp" alt="6">
+      </MainImage>
+      <MainImage letter="N">
+        <img src="/public/img/7.webp" alt="7">
+      </MainImage>
+    </div>
+    <div class="basis-1/2 flex flex-col gap-y-4">
+      <MainImage letter="U">
+        <img src="/public/img/1.webp" alt="1">
+      </MainImage>
+      <MainImage letter="K">
+        <img src="/public/img/5.webp" alt="5">
+      </MainImage>
+      <MainImage letter="G">
+        <img src="/public/img/3.webp" alt="3">
+      </MainImage>
+    </div>
   </div>
 
 </template>
 
 <style scoped>
+.slide-word {
+  transition: opacity 1s, transform 1s;
+  transform: translateY(-40px);
+  opacity: 0;
+  position: absolute;
+}
+
+.slide-word.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-word.hide {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Eclipse */
+
 .eclipse-image {
   animation: rotate 100s linear infinite;
 }
