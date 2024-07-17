@@ -4,7 +4,6 @@
 
 <template>
 
-  <footer class="absolute bottom-0 w-full">
     <div class="rounded-lg shadow bg-neutral-950 m-4">
       <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
@@ -30,8 +29,6 @@
         <span class="block text-sm sm:text-center text-neutral-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">F*cking World</a>. Tous droits réservés. Site web crée par le Studio Osalys.</span>
       </div>
     </div>
-  </footer>
-
 
 </template>
 

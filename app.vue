@@ -4,7 +4,7 @@
       <Navbar />
     </header>
 
-    <main class="min-h-screen">
+    <main>
       <NuxtRouteAnnouncer />
       <NuxtPage />
     </main>
