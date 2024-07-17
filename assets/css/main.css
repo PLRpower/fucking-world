@@ -27,3 +27,46 @@ h1, h2, h3, h4 {
     font-style: normal;
     text-transform: uppercase;
 }
+
+.slide-word {
+    transition: opacity 1s, transform 1s;
+    transform: translateY(-40px);
+    opacity: 0;
+    position: absolute;
+}
+
+.slide-word.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-word.hide {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+/* Eclipse */
+
+.eclipse-image {
+    animation: rotate 100s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move {
+    0% { transform: translateX(-100%); opacity: 0; }
+    1% { opacity: 1; }
+    99% { opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0; }
+}
+
+.moving-text {
+    animation: move 5s infinite linear;
+}
