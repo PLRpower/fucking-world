@@ -34,7 +34,7 @@ const toggleMenu = () => {
               <nuxt-link to="#" class="block py-2 px-3 rounded md:border-0 md:p-0 md:hover:text-neutral-400 hover:bg-neutral-700 md:hover:bg-transparent">Informations</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="#" class="block py-2 px-3 rounded md:border-0 md:p-0 md:hover:text-neutral-400 hover:bg-neutral-700 md:hover:bg-transparent">Réservation</nuxt-link>
+              <nuxt-link to="/reservation" class="block py-2 px-3 rounded md:border-0 md:p-0 md:hover:text-neutral-400 hover:bg-neutral-700 md:hover:bg-transparent">Réservation</nuxt-link>
             </li>
             <li>
               <nuxt-link to="#" class="block py-2 px-3 rounded md:border-0 md:p-0 md:hover:text-neutral-400 hover:bg-neutral-700 md:hover:bg-transparent">Contact</nuxt-link>

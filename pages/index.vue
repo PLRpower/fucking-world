@@ -31,7 +31,7 @@ export default {
 <template>
   <h1 id="random" class="mt-24 text-5xl text-center lg:text-9xl">F*cking<br/>World</h1>
   <h3 class="text-2xl text-center lg:text-5xl">09.10.24</h3>
-  <Button icon="mingcute:ticket-fill" link="/" class="m-auto mt-16 lg:text-xl">
+  <Button icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl">
     Get your tickets
   </Button>
   <div style="position: absolute; top:0; width: 100%">
@@ -91,7 +91,7 @@ export default {
     <div id="text-container" class="text-4xl font-bold moving-text font-variant">
       F*cking world !
     </div>
-    <Button icon="mingcute:ticket-fill" link="/" class="m-auto mt-16 lg:text-xl">
+    <Button icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl">
     Get your tickets
   </Button>
   </div>

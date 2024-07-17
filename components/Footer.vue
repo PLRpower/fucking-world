@@ -18,7 +18,7 @@
               <nuxt-link to="#" class="hover:underline me-4 md:me-6">Infos</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="#" class="hover:underline me-4 md:me-6">Réservation</nuxt-link>
+              <nuxt-link to="/reservation" class="hover:underline me-4 md:me-6">Réservation</nuxt-link>
             </li>
             <li>
               <nuxt-link to="#" class="hover:underline">Contact</nuxt-link>
