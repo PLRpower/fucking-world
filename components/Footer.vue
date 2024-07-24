@@ -15,6 +15,9 @@
               <nuxt-link to="/" class="hover:underline me-4 md:me-6">Accueil</nuxt-link>
             </li>
             <li>
+              <nuxt-link to="/concept" class="hover:underline me-4 md:me-6">Concept</nuxt-link>
+            </li>
+            <li>
               <nuxt-link to="/dress-code" class="hover:underline me-4 md:me-6">Dress code</nuxt-link>
             </li>
             <li>

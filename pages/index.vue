@@ -1,38 +1,48 @@
-<script>
-export default {
-  mounted() {
+<script setup lang="ts">
+import { onMounted } from 'vue';
+
+useSeoMeta({
+  title: "F*cking World - Page d'accueil",
+  ogTitle: "F*cking World - Page d'accueil",
+  description: 'Pour le dress code une seule règle : Tout est permis ... sauf le manque de créativité !',
+  ogDescription: 'Pour le dress code une seule règle : Tout est permis ... sauf le manque de créativité !',
+  ogImage: '',
+  twitterCard: 'summary_large_image',
+})
+
+onMounted(() => {
     const words = document.querySelectorAll('.slide-word');
     let currentIndex = 0;
 
     words[currentIndex].classList.add('show');
 
     setInterval(() => {
-      words[currentIndex].classList.remove('show');
-      words[currentIndex].classList.add('hide');
-      words[(currentIndex + 2) % words.length].classList.remove('hide');
+      words[currentIndex].classList.remove('show')
+      words[currentIndex].classList.add('hide')
+      words[(currentIndex + 2) % words.length].classList.remove('hide')
 
 
       currentIndex = (currentIndex + 1) % words.length;
 
-      words[currentIndex].classList.remove('hide');
-      words[currentIndex].classList.add('show');
+      words[currentIndex].classList.remove('hide')
+      words[currentIndex].classList.add('show')
 
     }, 2000);
 
-    const textContainer = document.getElementById('text-container');
-
-    setTimeout(() => {
-      textContainer.classList.add('moving-text');
-    }, 1000);
-  }
-}
+    const textContainer = document.getElementById('text-container')
+    if (textContainer) {
+      setTimeout(() => {
+        textContainer.classList.add('moving-text')
+      }, 1000);
+    }
+})
 </script>
 
 <template>
   <div class="h-screen">
-    <h1 class="text-6xl text-center md:text-8xl lg:text-9xl">F*cking<br/>World</h1>
-    <h3 class="text-2xl text-center lg:text-5xl">09.10.24</h3>
-    <WhiteButton icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl">
+    <h1 class="text-6xl text-center md:text-8xl lg:text-9xl animate__animated animate__fadeIn animate__slower">F*cking<br/>World</h1>
+    <p class="font-variant text-2xl text-center lg:text-5xl animate__animated animate__fadeIn animate__delay-1s">09.10.24</p>
+    <WhiteButton icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl animate__animated animate__fadeIn animate__delay-1s">
       Get your tickets
     </WhiteButton>
     <div class="top-24 w-full absolute">

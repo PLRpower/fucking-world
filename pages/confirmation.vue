@@ -1,7 +1,15 @@
 <script setup>
 import { onMounted } from 'vue';
 import { loadStripe } from '@stripe/stripe-js';
-import ReservationInformations from "~/components/ReservationInformations.vue";
+
+useSeoMeta({
+  title: "F*cking World - Confirmation de commande",
+  ogTitle: "F*cking World - Confirmation de commande",
+  description: 'Votre réservation a bien été prise en compte !',
+  ogDescription: 'Votre réservation a bien été prise en compte !',
+  ogImage: '',
+  twitterCard: 'summary_large_image',
+})
 
 onMounted(async () => {
   const stripePromise = loadStripe('pk_test_51Ks6MxGgpz8JSTyFcUkS8SQLWztbs5XbeqPukiLVVl79Hr2fuOEc0swSwJQpb84ydu7uSkjn01PKrdnpWaBFAm6H00X4nJEJZ1');

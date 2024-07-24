@@ -1,11 +1,27 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const isMenuOpen = ref(false);
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
 };
+
+const closeMenu = (event: MouseEvent) => {
+  const menu = document.getElementById('navbar-default');
+  const button = document.querySelector('button[aria-controls="navbar-default"]');
+  if (menu && button && !menu.contains(event.target as Node) && !button.contains(event.target as Node)) {
+    isMenuOpen.value = false;
+  }
+};
+
+onMounted(() => {
+  document.addEventListener('click', closeMenu);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('click', closeMenu);
+});
 </script>
 
 <template>
@@ -28,19 +44,25 @@ const toggleMenu = () => {
         <div class="absolute w-11/12 md:relative md:w-full">
           <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-neutral-800 md:bg-transparent border-neutral-700">
             <li>
-              <nuxt-link to="/" class="block py-2 px-3 rounded md:p-0" :class="{
+              <nuxt-link to="/" class="block py-2 px-3 rounded md:p-0" @click="toggleMenu" :class="{
                 'bg-white md:bg-transparent text-black md:text-neutral-400': $route.path === '/',
                 'md:hover:text-neutral-400 hover:bg-neutral-700 md:hover:bg-transparent': $route.path !== '/'
               }">Accueil</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/dress-code" class="block py-2 px-3 rounded md:p-0" :class="{
+              <nuxt-link to="/concept" class="block py-2 px-3 rounded md:p-0" @click="toggleMenu" :class="{
+                'bg-white md:bg-transparent text-black md:text-neutral-400': $route.path === '/concept',
+                'md:hover:text-neutral-400 hover:bg-neutral-700 md:hover:bg-transparent': $route.path !== '/concept'
+              }">Concept</nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/dress-code" class="block py-2 px-3 rounded md:p-0" @click="toggleMenu" :class="{
                 'bg-white md:bg-transparent text-black md:text-neutral-400': $route.path === '/dress-code',
                 'md:hover:text-neutral-400 hover:bg-neutral-700 md:hover:bg-transparent': $route.path !== '/dress-code'
               }">Dress code</nuxt-link>
             </li>
             <li>
-              <nuxt-link to="/reservation" class="block py-2 px-3 rounded md:p-0" :class="{
+              <nuxt-link to="/reservation" class="block py-2 px-3 rounded md:p-0" @click="toggleMenu" :class="{
                 'bg-white md:bg-transparent text-black md:text-neutral-400': $route.path === '/reservation',
                 'md:hover:text-neutral-400 hover:bg-neutral-700 md:hover:bg-transparent': $route.path !== '/reservation'
               }">Réservation</nuxt-link>

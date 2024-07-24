@@ -1,6 +1,12 @@
 <script setup lang="ts">
-
-import DressCodeImage from "~/components/DressCodeImage.vue";
+useSeoMeta({
+  title: "F*cking World - Dress code",
+  ogTitle: "F*cking World - Dress code",
+  description: 'Bienvenue ou là où tout est possible, où tout est F*cking World !',
+  ogDescription: 'Bienvenue ou là où tout est possible, où tout est F*cking World !',
+  ogImage: '',
+  twitterCard: 'summary_large_image',
+})
 </script>
 
 <template>

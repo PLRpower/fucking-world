@@ -1,58 +1,68 @@
-<script>
-export default {
-  data() {
-    return {
-      currentStep: 1,
-      form: {
-        nom: "",
-        prenom: "",
-        email: "",
-        email_confirmation: "",
-        telephone: "",
-        quantity: 0,
+<script setup lang="ts">
+import { reactive, computed, ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+useSeoMeta({
+  title: "F*cking World - Réservation",
+  ogTitle: "F*cking World - Réservation",
+  description: 'Réservez vos billets pour F*cking World dès maintenant !',
+  ogDescription: 'Réservez vos billets pour F*cking World dès maintenant !',
+  ogImage: '',
+  twitterCard: 'summary_large_image',
+})
+
+const router = useRouter();
+
+const currentStep = ref(1);
+const form = reactive({
+  nom: "",
+  prenom: "",
+  email: "",
+  email_confirmation: "",
+  telephone: "",
+  quantity: 0,
+});
+
+const isNotEnough = computed(() => form.quantity <= 0);
+
+const nextStep = () => {
+  if (currentStep.value < 3) {
+    currentStep.value++;
+  }
+};
+
+const previousStep = () => {
+  if (currentStep.value > 1) {
+    currentStep.value--;
+  }
+};
+
+const updateTotal = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  form.quantity = Number(target.value);
+};
+
+const submitForm = async () => {
+  try {
+    const response = await fetch('/api/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
       },
-    };
-  },
-  computed: {
-    isNotEnough() {
-      return this.form.quantity <= 0;
-    },
-  },
-  methods: {
-    nextStep() {
-      if (this.currentStep < 3) {
-        this.currentStep++;
-      }
-    },
-    previousStep() {
-      if (this.currentStep > 1) {
-        this.currentStep--;
-      }
-    },
-    updateTotal(event) {
-      this.quantity = event.target.value;
-    },
-    async submitForm() {
-      try {
-        const response = await fetch('/api/submit', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(this.form)
-        });
+      body: JSON.stringify(form)
+    });
 
-        const data = await response.json();
+    const data = await response.json();
 
-        if (response.ok) {
-          this.$router.push({ name: 'paiement', query: { clientSecret: data.clientSecret } });
-        }
-      } catch (error) {
-      }
+    if (response.ok) {
+      router.push({ name: 'paiement', query: { clientSecret: data.clientSecret } });
     }
+  } catch (error) {
+    console.error(error);
   }
 };
 </script>
+
 
 <template>
   <div class="my-48 mx-2">

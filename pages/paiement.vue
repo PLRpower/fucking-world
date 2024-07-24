@@ -1,9 +1,11 @@
-<script>
-import {defineComponent} from "vue";
-import ReservationInformations from "~/components/ReservationInformations.vue";
-
-export default defineComponent({
-  components: {ReservationInformations}
+<script setup lang="ts">
+useSeoMeta({
+  title: "F*cking World - Paiement",
+  ogTitle: "F*cking World - Paiement",
+  description: 'Paiement sécurisé pour votre réservation à F*cking World !',
+  ogDescription: 'Paiement sécurisé pour votre réservation à F*cking World !',
+  ogImage: '',
+  twitterCard: 'summary_large_image',
 })
 </script>
 
