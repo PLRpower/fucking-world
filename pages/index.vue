@@ -36,7 +36,7 @@ export default {
       Get your tickets
     </WhiteButton>
     <div class="top-24 w-full absolute">
-      <nuxt-img src="/img/eclipse.webp" alt="Eclipse" loading="lazy" class="eclipse-image w-full h-screen aspect-auto -z-10 absolute object-cover"/>
+      <nuxt-img src="/img/eclipse.webp" alt="Eclipse" loading="eager" class="eclipse-image w-full h-screen aspect-auto -z-10 absolute object-cover" width="1920" height="1238"/>
     </div>
   </div>
 
