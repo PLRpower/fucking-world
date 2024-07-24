@@ -10,9 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/fonts": "^0.7.1",
     "@nuxt/icon": "^1.0.0",
     "@nuxt/image": "^1.7.0",
     "@stripe/stripe-js": "^4.1.0",
+    "@vercel/speed-insights": "^1.0.12",
     "nuxt": "^3.12.3",
     "stripe": "^16.2.0",
     "vue": "latest",

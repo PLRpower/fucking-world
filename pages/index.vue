@@ -36,7 +36,7 @@ export default {
       Get your tickets
     </WhiteButton>
     <div class="top-24 w-full absolute">
-      <nuxt-img src="/img/eclipse.webp" alt="Eclipse" class="eclipse-image w-full h-screen aspect-auto -z-10 absolute" style="object-fit: cover"/>
+      <nuxt-img src="/img/eclipse.webp" alt="Eclipse" loading="lazy" class="eclipse-image w-full h-screen aspect-auto -z-10 absolute object-cover"/>
     </div>
   </div>
 
@@ -47,7 +47,7 @@ export default {
       <Icon name="ph:disco-ball-fill" class="text-3xl me-2"/>
       Climate Change(s)
     </p>
-    <nuxt-img src="/img/kooma.webp" alt="Kooma" class="h-12"/>
+    <nuxt-img src="/img/kooma.webp" loading="lazy" alt="Kooma" class="h-12"/>
     <p>Fluo</p>
   </div>
 
@@ -65,27 +65,27 @@ export default {
   <div class="lg:flex my-24 gap-x-4 mb-4 text-5xl">
     <div class="basis-1/2 flex flex-col gap-y-4 mb-4 lg:mb-0">
       <MainImage letter="F">
-        <nuxt-img src="/img/2.webp" alt="1" class="w-full"/>
+        <nuxt-img src="/img/2.webp" loading="lazy" alt="1" class="w-full"/>
       </MainImage>
       <MainImage letter="U">
-        <nuxt-img src="/img/4.webp" alt="2" class="w-full"/>
+        <nuxt-img src="/img/4.webp" loading="lazy" alt="2" class="w-full"/>
       </MainImage>
       <MainImage letter="C">
-        <nuxt-img src="/img/6.webp" alt="3" class="w-full"/>
+        <nuxt-img src="/img/6.webp" loading="lazy" alt="3" class="w-full"/>
       </MainImage>
       <MainImage letter="K">
-        <nuxt-img src="/img/7.webp" alt="4" class="w-full"/>
+        <nuxt-img src="/img/7.webp" loading="lazy" alt="4" class="w-full"/>
       </MainImage>
     </div>
     <div class="basis-1/2 flex flex-col gap-y-4">
       <MainImage letter="I">
-        <nuxt-img src="/img/1.webp" alt="5" class="w-full"/>
+        <nuxt-img src="/img/1.webp" loading="lazy" alt="5" class="w-full"/>
       </MainImage>
       <MainImage letter="N">
-        <nuxt-img src="/img/5.webp" alt="6" class="w-full"/>
+        <nuxt-img src="/img/5.webp" loading="lazy" alt="6" class="w-full"/>
       </MainImage>
       <MainImage letter="G">
-        <nuxt-img src="/img/3.webp" alt="7" class="w-full"/>
+        <nuxt-img src="/img/3.webp" loading="lazy" alt="7" class="w-full"/>
       </MainImage>
     </div>
   </div>

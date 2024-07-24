@@ -48,7 +48,7 @@ onMounted(async () => {
           Rendez vous le 9 octobre 2024 à 19h00 !<br>
           Un email de confirmation avec le code QR va vous être envoyé d'ici quelques minutes (vérifiez vos spams !)
         </p>
-        <nuxt-img src="/img/success.svg" alt="Succès" class="mx-auto"/>
+        <nuxt-img loading="lazy" src="/img/success.svg" alt="Succès" class="mx-auto"/>
         <WhiteButton link="/" class="mx-auto" icon="mingcute:home-3-fill">Retour à l'accueil</WhiteButton>
       </div>
 

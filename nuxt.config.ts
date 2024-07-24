@@ -11,7 +11,17 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/icon", "@nuxt/image"],
+  modules: ["@nuxt/icon", "@nuxt/image", "@nuxt/fonts"],
+
+  fonts: {
+    defaults: {
+      styles: ['normal'],
+      subsets: [
+        'dela-gothic-one',
+        'montserrat',
+      ]
+    },
+  },
 
   runtimeConfig: {
     STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
@@ -19,5 +29,5 @@ export default defineNuxtConfig({
     public: {
         STRIPE_PUBLIC_KEY: process.env.STRIPE_PUBLIC_KEY,
     }
-  }
+  },
 })
