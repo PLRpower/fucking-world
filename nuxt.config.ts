@@ -11,5 +11,13 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/icon"]
+  modules: ["@nuxt/icon", "@nuxt/image"],
+
+  runtimeConfig: {
+    STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
+    ENDPOINT_SECRET: process.env.ENDPOINT_SECRET,
+    public: {
+        STRIPE_PUBLIC_KEY: process.env.STRIPE_PUBLIC_KEY,
+    }
+  }
 })

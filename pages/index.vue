@@ -29,22 +29,25 @@ export default {
 </script>
 
 <template>
-  <h1 id="random" class="mt-24 text-5xl text-center lg:text-9xl">F*cking<br/>World</h1>
-  <h3 class="text-2xl text-center lg:text-5xl">09.10.24</h3>
-  <Button icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl">
-    Get your tickets
-  </Button>
-  <div style="position: absolute; top:0; width: 100%">
-    <img src="/public/img/eclipse.webp" alt="Eclipse" class="eclipse-image -z-10 absolute">
+  <div class="h-screen">
+    <h1 class="text-6xl text-center md:text-8xl lg:text-9xl">F*cking<br/>World</h1>
+    <h3 class="text-2xl text-center lg:text-5xl">09.10.24</h3>
+    <WhiteButton icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl">
+      Get your tickets
+    </WhiteButton>
+    <div class="top-24 w-full absolute">
+      <nuxt-img src="/img/eclipse.webp" alt="Eclipse" class="eclipse-image w-full h-screen aspect-auto -z-10 absolute" style="object-fit: cover"/>
+    </div>
   </div>
 
-  <div class="flex flex-col justify-center items-center mt-4 gap-4">
-    <h2 class="text-center text-3xl mt-48">Events by</h2>
+
+  <div class="flex flex-col justify-center items-center gap-4">
+    <h2 class="text-center text-3xl">Events by</h2>
     <p class="flex w-fit items-center">
       <Icon name="ph:disco-ball-fill" class="text-3xl me-2"/>
       Climate Change(s)
     </p>
-    <img src="/public/img/kooma.webp" alt="Kooma" class="h-12">
+    <nuxt-img src="/img/kooma.webp" alt="Kooma" class="h-12"/>
     <p>Fluo</p>
   </div>
 
@@ -62,27 +65,27 @@ export default {
   <div class="lg:flex my-24 gap-x-4 mb-4 text-5xl">
     <div class="basis-1/2 flex flex-col gap-y-4 mb-4 lg:mb-0">
       <MainImage letter="F">
-        <img src="/public/img/2.webp" alt="1" class="w-full">
+        <nuxt-img src="/img/2.webp" alt="1" class="w-full"/>
       </MainImage>
       <MainImage letter="U">
-        <img src="/public/img/4.webp" alt="2" class="w-full">
+        <nuxt-img src="/img/4.webp" alt="2" class="w-full"/>
       </MainImage>
       <MainImage letter="C">
-        <img src="/public/img/6.webp" alt="3" class="w-full">
+        <nuxt-img src="/img/6.webp" alt="3" class="w-full"/>
       </MainImage>
       <MainImage letter="K">
-        <img src="/public/img/7.webp" alt="4" class="w-full">
+        <nuxt-img src="/img/7.webp" alt="4" class="w-full"/>
       </MainImage>
     </div>
     <div class="basis-1/2 flex flex-col gap-y-4">
       <MainImage letter="I">
-        <img src="/public/img/1.webp" alt="5" class="w-full">
+        <nuxt-img src="/img/1.webp" alt="5" class="w-full"/>
       </MainImage>
       <MainImage letter="N">
-        <img src="/public/img/5.webp" alt="6" class="w-full">
+        <nuxt-img src="/img/5.webp" alt="6" class="w-full"/>
       </MainImage>
       <MainImage letter="G">
-        <img src="/public/img/3.webp" alt="7" class="w-full">
+        <nuxt-img src="/img/3.webp" alt="7" class="w-full"/>
       </MainImage>
     </div>
   </div>
@@ -91,9 +94,9 @@ export default {
     <div id="text-container" class="text-4xl font-bold moving-text font-variant">
       F*cking world !
     </div>
-    <Button icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl">
+    <WhiteButton icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl">
     Get your tickets
-  </Button>
+  </WhiteButton>
   </div>
 
 </template>

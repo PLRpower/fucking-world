@@ -8,8 +8,6 @@
 body {
     color: white;
     background-color: black;
-    background-size: cover;
-    background-position: center; /* Centre l'image dans le conteneur */
     overflow-x: hidden;
     max-width: 100%;
     font-family: 'Montserrat', sans-serif;
