@@ -28,7 +28,7 @@ onUnmounted(() => {
   <nav class="border-neutral-200">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <nuxt-link to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <nuxt-img src="/img/logo.webp" loading="lazy" class="h-8" alt="Logo" />
+        <nuxt-img src="/img/logo.webp" loading="lazy" class="h-8" alt="Logo" width="32" height="32"/>
       </nuxt-link>
       <button
           @click="toggleMenu"
@@ -41,7 +41,7 @@ onUnmounted(() => {
         </svg>
       </button>
       <div :class="{'block': isMenuOpen, 'hidden': !isMenuOpen}" class="w-full md:block md:w-auto" id="navbar-default">
-        <div class="absolute w-11/12 md:relative md:w-full">
+        <div class="absolute w-11/12 md:relative md:w-full z-50">
           <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-neutral-800 md:bg-transparent border-neutral-700">
             <li>
               <nuxt-link to="/" class="block py-2 px-3 rounded md:p-0" @click="toggleMenu" :class="{

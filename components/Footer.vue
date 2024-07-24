@@ -8,7 +8,7 @@
       <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
           <nuxt-link href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse bg-black p-4 rounded-2xl">
-            <nuxt-img src="/img/logo.webp" loading="lazy" class="h-8" alt="F*cking world" />
+            <nuxt-img src="/img/logo.webp" loading="lazy" class="h-8" alt="F*cking world" width="32" height="32" />
           </nuxt-link>
           <ul class="flex flex-wrap items-center mb-6 font-medium sm:mb-0 text-neutral-400">
             <li>
