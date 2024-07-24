@@ -11,15 +11,12 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxt/icon", "@nuxt/image", "@nuxt/fonts"],
+  modules: ["@nuxt/icon", "@nuxt/image", "@nuxtjs/google-fonts"],
 
-  fonts: {
-    defaults: {
-      styles: ['normal'],
-      subsets: [
-        'dela-gothic-one',
-        'montserrat',
-      ]
+  googleFonts: {
+    families: {
+      'Dela Gothic One': true,
+      Montserrat: true,
     },
   },
 
@@ -30,11 +27,4 @@ export default defineNuxtConfig({
         STRIPE_PUBLIC_KEY: process.env.STRIPE_PUBLIC_KEY,
     }
   },
-
-  app: {
-    head: {
-      charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1',
-    }
-  }
 })

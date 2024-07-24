@@ -65,27 +65,27 @@ export default {
   <div class="lg:flex my-24 gap-x-4 mb-4 text-5xl">
     <div class="basis-1/2 flex flex-col gap-y-4 mb-4 lg:mb-0">
       <MainImage letter="F">
-        <nuxt-img src="/img/2.webp" loading="lazy" alt="1" class="w-full"/>
+        <nuxt-img src="/img/2.webp" loading="lazy" alt="1" class="w-full" width="800" height="571"/>
       </MainImage>
       <MainImage letter="U">
-        <nuxt-img src="/img/4.webp" loading="lazy" alt="2" class="w-full"/>
+        <nuxt-img src="/img/4.webp" loading="lazy" alt="2" class="w-full" width="800" height="455"/>
       </MainImage>
       <MainImage letter="C">
-        <nuxt-img src="/img/6.webp" loading="lazy" alt="3" class="w-full"/>
+        <nuxt-img src="/img/6.webp" loading="lazy" alt="3" class="w-full" width="800" height="533"/>
       </MainImage>
       <MainImage letter="K">
-        <nuxt-img src="/img/7.webp" loading="lazy" alt="4" class="w-full"/>
+        <nuxt-img src="/img/7.webp" loading="lazy" alt="4" class="w-full" width="800" height="412"/>
       </MainImage>
     </div>
     <div class="basis-1/2 flex flex-col gap-y-4">
       <MainImage letter="I">
-        <nuxt-img src="/img/1.webp" loading="lazy" alt="5" class="w-full"/>
+        <nuxt-img src="/img/1.webp" loading="lazy" alt="5" class="w-full" width="800" height="563"/>
       </MainImage>
       <MainImage letter="N">
-        <nuxt-img src="/img/5.webp" loading="lazy" alt="6" class="w-full"/>
+        <nuxt-img src="/img/5.webp" loading="lazy" alt="6" class="w-full" width="800" height="640"/>
       </MainImage>
       <MainImage letter="G">
-        <nuxt-img src="/img/3.webp" loading="lazy" alt="7" class="w-full"/>
+        <nuxt-img src="/img/3.webp" loading="lazy" alt="7" class="w-full" width="800" height="1081"/>
       </MainImage>
     </div>
   </div>

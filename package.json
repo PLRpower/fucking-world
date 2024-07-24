@@ -10,9 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/fonts": "^0.7.1",
     "@nuxt/icon": "^1.0.0",
     "@nuxt/image": "^1.7.0",
+    "@nuxtjs/google-fonts": "^3.2.0",
     "@stripe/stripe-js": "^4.1.0",
     "@vercel/speed-insights": "^1.0.12",
     "nuxt": "^3.12.3",
@@ -21,6 +21,9 @@
     "vue-router": "^4.4.0"
   },
   "devDependencies": {
+    "@iconify-json/material-symbols-light": "^1.1.25",
+    "@iconify-json/mingcute": "^1.1.18",
+    "@iconify-json/ph": "^1.1.13",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.4"
