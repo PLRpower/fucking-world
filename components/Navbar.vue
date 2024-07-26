@@ -28,7 +28,7 @@ onUnmounted(() => {
   <nav class="border-neutral-200">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <nuxt-link to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <nuxt-img src="/img/logo.webp" loading="lazy" class="h-8" alt="Logo" width="32" height="32"/>
+        <nuxt-img src="/img/logo.webp" class="h-8" alt="Logo" width="32" height="32"/>
       </nuxt-link>
       <button
           @click="toggleMenu"

@@ -9,7 +9,7 @@ defineProps({
     <div class="w-full flex-none opacity-40 grayscale group-hover:opacity-100 group-hover:grayscale-0 transition-all ease-in-out duration-300">
       <slot></slot>
     </div>
-    <span class="overlay group-hover:opacity-0 opacity-100 cursor-default font-variant text-2xl lg:text-5xl">{{ title }}</span>
+    <span class="overlay group-hover:opacity-0 opacity-100 cursor-default font-variant text-2xl lg:text-5xl text-center">{{ title }}</span>
   </div>
 </template>
 

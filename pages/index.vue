@@ -40,11 +40,13 @@ onMounted(() => {
 
 <template>
   <div class="h-screen">
-    <h1 class="text-6xl text-center md:text-8xl lg:text-9xl mt-48 md:mt-28" data-aos="fade-in">F*cking<br/>World</h1>
+    <h1 class="text-6xl text-center md:text-8xl lg:text-9xl mt-48 md:mt-28 lg:mt-24" data-aos="fade-in">F*cking<br/>World</h1>
     <p class="font-variant text-2xl text-center lg:text-5x" data-aos="fade-in" data-aos-delay="200">09.10.24</p>
-    <WhiteButton icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl"  data-aos="fade-in" data-aos-delay="400">
-      Get your tickets
-    </WhiteButton>
+    <div data-aos="fade-in" data-aos-delay="400">
+      <WhiteButton icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl">
+        Get your tickets
+      </WhiteButton>
+    </div>
     <div class="top-24 w-full absolute" >
       <nuxt-img src="/img/eclipse.webp" alt="Eclipse" class="eclipse-image w-full h-screen aspect-auto -z-10 absolute object-cover opacity-90" width="1920" height="1238" data-aos="fade-in" data-aos-delay="800"/>
     </div>
@@ -57,7 +59,7 @@ onMounted(() => {
       <Icon name="ph:disco-ball-fill" class="text-3xl me-2"/>
       Climate Change(s)
     </p>
-    <nuxt-img src="/img/kooma.webp" loading="lazy" alt="Kooma" class="h-12" data-aos="fade-up" data-aos-delay="400"/>
+    <nuxt-img src="/img/kooma.webp" loading="lazy" alt="Kooma" class="h-12 object-contain" width="1080" height="400" data-aos="fade-up" data-aos-delay="400"/>
     <p data-aos="fade-up" data-aos-delay="600">Fluo</p>
   </div>
 
