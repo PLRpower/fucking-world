@@ -40,62 +40,63 @@ onMounted(() => {
 
 <template>
   <div class="h-screen">
-    <h1 class="text-6xl text-center md:text-8xl lg:text-9xl animate__animated animate__fadeIn animate__slower">F*cking<br/>World</h1>
-    <p class="font-variant text-2xl text-center lg:text-5xl animate__animated animate__fadeIn animate__delay-1s">09.10.24</p>
-    <WhiteButton icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl animate__animated animate__fadeIn animate__delay-1s">
+    <h1 class="text-6xl text-center md:text-8xl lg:text-9xl mt-48 md:mt-28" data-aos="fade-in">F*cking<br/>World</h1>
+    <p class="font-variant text-2xl text-center lg:text-5x" data-aos="fade-in" data-aos-delay="200">09.10.24</p>
+    <WhiteButton icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl"  data-aos="fade-in" data-aos-delay="400">
       Get your tickets
     </WhiteButton>
-    <div class="top-24 w-full absolute">
-      <nuxt-img src="/img/eclipse.webp" alt="Eclipse" class="eclipse-image w-full h-screen aspect-auto -z-10 absolute object-cover" width="1920" height="1238"/>
+    <div class="top-24 w-full absolute" >
+      <nuxt-img src="/img/eclipse.webp" alt="Eclipse" class="eclipse-image w-full h-screen aspect-auto -z-10 absolute object-cover opacity-90" width="1920" height="1238" data-aos="fade-in" data-aos-delay="800"/>
     </div>
   </div>
 
 
-  <div class="flex flex-col justify-center items-center gap-4">
-    <h2 class="text-center text-3xl">Events by</h2>
-    <p class="flex w-fit items-center">
+  <div class="flex flex-col justify-center items-center gap-4 py-16">
+    <h2 class="text-center text-5xl" data-aos="fade-up">Events by</h2>
+    <p class="flex w-fit items-center" data-aos="fade-up" data-aos-delay="200">
       <Icon name="ph:disco-ball-fill" class="text-3xl me-2"/>
       Climate Change(s)
     </p>
-    <nuxt-img src="/img/kooma.webp" loading="lazy" alt="Kooma" class="h-12"/>
-    <p>Fluo</p>
+    <nuxt-img src="/img/kooma.webp" loading="lazy" alt="Kooma" class="h-12" data-aos="fade-up" data-aos-delay="400"/>
+    <p data-aos="fade-up" data-aos-delay="600">Fluo</p>
   </div>
 
-  <div class="max-w-3xl mx-auto text-4xl font-variant flex my-24 ms-4">
-    <p class="me-2">F*ck</p>
-    <div class="slide-container">
-      <span class="slide-word">this</span>
-      <span class="slide-word">that</span>
-      <span class="slide-word">you</span>
-      <span class="slide-word">the F*cking world</span>
-      <span class="slide-word">off … and dance!</span>
+
+  <div class="text-center text-5xl font-variant py-16" data-aos="fade-up">
+    <p class="me-2 bg-black z-10">F*ck</p>
+    <div class="slide-container flex justify-center">
+      <span class="slide-word -z-10">this</span>
+      <span class="slide-word -z-10">that</span>
+      <span class="slide-word -z-10">you</span>
+      <span class="slide-word -z-10">the F*cking world</span>
+      <span class="slide-word -z-10">off … and dance!</span>
     </div>
   </div>
 
-  <div class="lg:flex my-24 gap-x-4 mb-4 text-5xl">
+  <div class="lg:flex py-16 gap-x-4 mb-4 text-5xl">
     <div class="basis-1/2 flex flex-col gap-y-4 mb-4 lg:mb-0">
       <MainImage letter="F">
-        <nuxt-img src="/img/2.webp" loading="lazy" alt="1" class="w-full" width="800" height="571"/>
+        <nuxt-img src="/img/2.webp" loading="lazy" alt="1" class="w-full" width="800" height="571" data-aos="fade-up"/>
       </MainImage>
       <MainImage letter="U">
-        <nuxt-img src="/img/4.webp" loading="lazy" alt="2" class="w-full" width="800" height="455"/>
+        <nuxt-img src="/img/4.webp" loading="lazy" alt="2" class="w-full" width="800" height="455" data-aos="fade-up"/>
       </MainImage>
       <MainImage letter="C">
-        <nuxt-img src="/img/6.webp" loading="lazy" alt="3" class="w-full" width="800" height="533"/>
+        <nuxt-img src="/img/6.webp" loading="lazy" alt="3" class="w-full" width="800" height="533" data-aos="fade-up"/>
       </MainImage>
       <MainImage letter="K">
-        <nuxt-img src="/img/7.webp" loading="lazy" alt="4" class="w-full" width="800" height="412"/>
+        <nuxt-img src="/img/7.webp" loading="lazy" alt="4" class="w-full" width="800" height="412" data-aos="fade-up"/>
       </MainImage>
     </div>
     <div class="basis-1/2 flex flex-col gap-y-4">
       <MainImage letter="I">
-        <nuxt-img src="/img/1.webp" loading="lazy" alt="5" class="w-full" width="800" height="563"/>
+        <nuxt-img src="/img/1.webp" loading="lazy" alt="5" class="w-full" width="800" height="563" data-aos="fade-up"/>
       </MainImage>
       <MainImage letter="N">
-        <nuxt-img src="/img/5.webp" loading="lazy" alt="6" class="w-full" width="800" height="640"/>
+        <nuxt-img src="/img/5.webp" loading="lazy" alt="6" class="w-full" width="800" height="640" data-aos="fade-up"/>
       </MainImage>
       <MainImage letter="G">
-        <nuxt-img src="/img/3.webp" loading="lazy" alt="7" class="w-full" width="800" height="1081"/>
+        <nuxt-img src="/img/3.webp" loading="lazy" alt="7" class="w-full" width="800" height="1081" data-aos="fade-up"/>
       </MainImage>
     </div>
   </div>
@@ -112,4 +113,47 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
+.slide-word {
+  transition: opacity 1s, transform 1s;
+  transform: translateY(-40px);
+  opacity: 0;
+  position: absolute;
+}
+
+.slide-word.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-word.hide {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Eclipse */
+
+.eclipse-image {
+  animation: rotate 100s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move {
+  0% { transform: translateX(-100%); opacity: 0; }
+  1% { opacity: 1; }
+  99% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+.moving-text {
+  animation: move 5s infinite linear;
+}
 </style>

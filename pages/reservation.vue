@@ -23,6 +23,8 @@ const form = reactive({
   quantity: 0,
 });
 
+const errorMessage = ref("");
+const emailErrorMessage = ref("");
 const isNotEnough = computed(() => form.quantity <= 0);
 
 const nextStep = () => {
@@ -42,7 +44,20 @@ const updateTotal = (event: Event) => {
   form.quantity = Number(target.value);
 };
 
+const validateEmails = () => {
+  if (form.email !== form.email_confirmation) {
+    emailErrorMessage.value = "Les adresses email ne se correspondent pas.";
+    return false;
+  }
+  emailErrorMessage.value = "";
+  return true;
+};
+
 const submitForm = async () => {
+  if (!validateEmails()) {
+    return;
+  }
+
   try {
     const response = await fetch('/api/submit', {
       method: 'POST',
@@ -56,22 +71,24 @@ const submitForm = async () => {
 
     if (response.ok) {
       router.push({ name: 'paiement', query: { clientSecret: data.clientSecret } });
+    } else {
+      errorMessage.value = "L'adresse email saisie est invalide.";
     }
   } catch (error) {
-    console.error(error);
+    errorMessage.value = "L'adresse email saisie est invalide.";
   }
 };
 </script>
 
 
 <template>
-  <div class="my-48 mx-2">
+  <div class="my-24 mx-2">
     <div class="text-center mb-16">
-      <h1 class="font-variant text-4xl lg:text-6xl mb-4">Réservation</h1>
-      <p class="font-neutral-700 text-lg">Obtenez vos billets dès maintenant !</p>
+      <h1 class="font-variant text-4xl lg:text-6xl mb-4" data-aos="fade-up">Réservation</h1>
+      <p class="font-neutral-700 text-lg" data-aos="fade-up" data-aos-delay="200">Obtenez vos billets dès maintenant !</p>
     </div>
 
-    <form class="bg-white rounded-2xl lg:max-w-screen-lg mx-auto text-black p-8 lg:p-16" @submit.prevent="submitForm">
+    <form class="bg-white rounded-2xl lg:max-w-screen-lg mx-auto text-black p-8 lg:p-16" @submit.prevent="submitForm" data-aos="fade-up" data-aos-delay="400">
 
       <ReservationInformations/>
 
@@ -146,6 +163,7 @@ const submitForm = async () => {
         <div class="mb-5">
           <label for="email_confirmation" class="block mb-2 font-medium">Confirmation email</label>
           <input v-model="form.email_confirmation" type="email" id="email_confirmation" class="border shadow rounded-lg block w-full p-2.5 placeholder-neutral-400 focus:ring-neutral-500 focus:border-neutral-500" placeholder="donald.trump@gmail.com" required />
+          <p v-if="emailErrorMessage" class="text-red-500 mt-2">{{ emailErrorMessage }}</p>
         </div>
 
         <div class="mb-5">
@@ -161,11 +179,13 @@ const submitForm = async () => {
           <button type="submit" class="rounded-lg px-6 py-3 border-2 font-bold flex w-fit items-center hover:scale-105 ease-in-out transition-all bg-black text-white"
           >Suite</button>
         </div>
+
+        <div v-if="errorMessage" class="mt-4 p-4 bg-red-200 text-red-800 rounded">
+          <p>{{ errorMessage }}</p>
+        </div>
       </div>
     </form>
   </div>
-
-
 </template>
 
 <style scoped>
