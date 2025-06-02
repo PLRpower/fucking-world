@@ -77,9 +77,9 @@ useSeoMeta({
   <div class="py-16 text-center flex justify-center gap-x-4 md:gap-x-8 items-center" data-aos="fade-up">
     <Icon name="mingcute:location-fill" class="text-7xl font-variant"></Icon>
     <div>
-      <h2 class="text-4xl font-variant">Kooma</h2>
-      <p class="mt-2 md:text-lg">6 Cr des Cigarières, 67000 Strasbourg</p>
-      <WhiteButton icon="mingcute:location-fill" class="mx-auto mt-4" link="https://maps.app.goo.gl/UpVhyxeMag6T1m1q7" target="_blank" rel="noopener noreferrer nofollow">Afficher sur maps</WhiteButton>
+      <h2 class="text-4xl font-variant">Bar Tempête</h2>
+      <p class="mt-2 md:text-lg">5 Rue des Couples, 67000 Strasbourg</p>
+      <WhiteButton icon="mingcute:location-fill" class="mx-auto mt-4" link="https://maps.app.goo.gl/kS2d1ErtLzLvgpmn8" target="_blank" rel="noopener noreferrer nofollow">Afficher sur maps</WhiteButton>
     </div>
   </div>
 
@@ -91,7 +91,6 @@ useSeoMeta({
       <span class="text-7xl md:text-8xl font-variant" data-aos="fade-up" data-aos-delay="300">&</span>
       <p class="text-3xl md:text-5xl font-variant" data-aos="fade-up" data-aos-delay="600">After</p>
     </div>
-    <p class="mt-8 md:text-lg" data-aos="fade-up" data-aos-delay="800">Quelques informations supplémentaires ...</p>
   </div>
 
   <VerticalLine class="h-48" data-aos="fade-up" data-aos-delay="100" />

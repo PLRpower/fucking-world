@@ -4,7 +4,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
-const stripePromise = loadStripe('pk_test_51Ks6MxGgpz8JSTyFcUkS8SQLWztbs5XbeqPukiLVVl79Hr2fuOEc0swSwJQpb84ydu7uSkjn01PKrdnpWaBFAm6H00X4nJEJZ1');
+const stripePromise = loadStripe('pk_test_51RVYNIB2XETaCEhao1gof4cwl6ekUWgjzH7GQ0KIl0cESUCTx6IHVdauaoC3wQD2DUbUdBWWQW0Uo9FlKd42jrGf00RFDJFxfB');
 const stripe = await stripePromise;
 
 const appearance = {

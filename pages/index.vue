@@ -41,8 +41,9 @@ onMounted(() => {
 <template>
   <div class="h-screen">
     <h1 class="text-6xl text-center md:text-8xl lg:text-9xl mt-48 md:mt-28 lg:mt-24" data-aos="fade-in">F*cking<br/>World</h1>
-    <p class="font-variant text-2xl text-center lg:text-5x" data-aos="fade-in" data-aos-delay="200">09.10.24</p>
-    <div data-aos="fade-in" data-aos-delay="400">
+    <p class="font-variant text-2xl text-center lg:text-5x" data-aos="fade-in" data-aos-delay="200">20.06.25</p>
+      <p class="font-variant text-center lg:text-5x" data-aos="fade-in" data-aos-delay="400"> (20:00 to 3:00)</p>
+      <div data-aos="fade-in" data-aos-delay="400">
       <WhiteButton icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-16 lg:text-xl">
         Get your tickets
       </WhiteButton>
@@ -59,8 +60,8 @@ onMounted(() => {
       <Icon name="ph:disco-ball-fill" class="text-3xl me-2"/>
       Climate Change(s)
     </p>
-    <nuxt-img src="/img/kooma.webp" loading="lazy" alt="Kooma" class="h-12 object-contain" width="1080" height="400" data-aos="fade-up" data-aos-delay="400"/>
-    <p data-aos="fade-up" data-aos-delay="600">Fluo</p>
+    <nuxt-img src="/img/fluo.webp" loading="lazy" alt="Fluo" class="h-12 object-contain" width="828" height="421" data-aos="fade-up" data-aos-delay="400"/>
+    <nuxt-img src="/img/tempete.webp" loading="lazy" alt="Tempete" class="h-8 object-contain" width="656" height="109" data-aos="fade-up" data-aos-delay="400"/>
   </div>
 
 

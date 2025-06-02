@@ -26,7 +26,7 @@
           </ul>
         </div>
         <hr class="my-6 sm:mx-auto border-neutral-700 lg:my-8" />
-        <span class="block text-sm sm:text-center text-neutral-400">© 2024 <nuxt-link to="/" class="hover:underline">F*cking World</nuxt-link>. Tous droits réservés. Site web crée par le <nuxt-link to="https://osalys.studio" class="hover:underline">Studio Osalys</nuxt-link>.</span>
+        <span class="block text-sm sm:text-center text-neutral-400">© 2025 <nuxt-link to="/" class="hover:underline">F*cking World</nuxt-link>. Tous droits réservés. Site web crée par le <nuxt-link to="https://osalys.studio" class="hover:underline">Studio Osalys</nuxt-link>.</span>
       </div>
     </div>
 
