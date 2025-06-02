@@ -26,7 +26,7 @@ const handleSubmit = async () => {
   const { error } = await stripe.confirmPayment({
     elements,
     confirmParams: {
-      return_url: "http://localhost:3000/confirmation",
+      return_url: "https://fucking-world.vercel.app/confirmation",
     },
   });
 
