@@ -19,12 +19,8 @@ export default {
       <span class="font-bold">2</span>
       <p class="text-sm md:text-base" :class="{ 'font-bold': 2 === currentStep }">Coordonnées</p>
     </div>
-    <div class="border-b-2 text-center basis-1/3" :class="{ 'border-black': 3 === currentStep }">
-      <span class="font-bold">3</span>
-      <p class="text-sm md:text-base" :class="{ 'font-bold': 3 === currentStep }">Paiement</p>
-    </div>
     <div class="border-b-2 text-center basis-1/3" :class="{ 'border-black': 4 === currentStep }">
-      <span class="font-bold">4</span>
+      <span class="font-bold">3</span>
       <p class="text-sm md:text-base" :class="{ 'font-bold': 4 === currentStep }">Confirmation</p>
     </div>
   </div>

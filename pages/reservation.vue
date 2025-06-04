@@ -20,7 +20,7 @@ const form = reactive({
   email: "",
   email_confirmation: "",
   telephone: "",
-  quantity: 0,
+  quantity: 1,
 });
 
 const errorMessage = ref("");
@@ -67,10 +67,8 @@ const submitForm = async () => {
       body: JSON.stringify(form)
     });
 
-    const data = await response.json();
-
     if (response.ok) {
-      router.push({ name: 'paiement', query: { clientSecret: data.clientSecret } });
+      router.push({ name: 'confirmation' });
     } else {
       errorMessage.value = "L'adresse email saisie est invalide.";
     }
@@ -104,30 +102,16 @@ const submitForm = async () => {
               <th scope="col" class="text-right">Quantité</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="h-16">
             <tr>
-              <td>Tarif early</td>
-              <td class="text-center">10 €</td>
-              <td class="text-right">
-                <select class="border-2 shadow px-6 py-3 my-2 rounded-lg" name="quantite" id="quantite" @change="updateTotal($event)" v-model="form.quantity">
-                  <option value="0">0</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                </select>
-              </td>
+              <td>Tarif Free</td>
+              <td class="text-center">0 €</td>
+              <td class="text-right">1</td>
             </tr>
           </tbody>
         </table>
 
-        <div class="bg-neutral-200 text-right p-2 rounded-lg text-lg mb-4"><p>Total (TTC) : {{ form.quantity * 10 }} €</p></div>
+        <div class="bg-neutral-200 text-right p-2 rounded-lg text-lg mb-4"><p>Total (TTC) : 0,00 €</p></div>
 
         <div class="flex justify-end">
           <button
@@ -177,7 +161,7 @@ const submitForm = async () => {
               @click="previousStep"
           >Retour</button>
           <button type="submit" class="rounded-lg px-6 py-3 border-2 font-bold flex w-fit items-center hover:scale-105 ease-in-out transition-all bg-black text-white"
-          >Suite</button>
+          >Réserver</button>
         </div>
 
         <div v-if="errorMessage" class="mt-4 p-4 bg-red-200 text-red-800 rounded">

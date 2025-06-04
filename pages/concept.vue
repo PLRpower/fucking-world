@@ -96,7 +96,7 @@ useSeoMeta({
   <VerticalLine class="h-48" data-aos="fade-up" data-aos-delay="100" />
 
   <div class="py-16 text-center">
-    <p class="text-7xl font-variant" data-aos="fade-up">10€<span class="text-neutral-400 text-6xl">*</span></p>
+    <p class="text-7xl font-variant" data-aos="fade-up">Free Entry<span class="text-neutral-400 text-6xl">*</span></p>
     <p class="mt-2 md:text-lg text-neutral-400" data-aos="fade-up" data-aos-delay="200">*Tout les revenus sont versés aux artistes ainsi qu'à la logistique.</p>
     <div data-aos="fade-up" data-aos-delay="400">
       <WhiteButton icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-8 lg:text-xls">

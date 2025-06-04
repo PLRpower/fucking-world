@@ -21,10 +21,9 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,
-    ENDPOINT_SECRET: process.env.ENDPOINT_SECRET,
     public: {
-        STRIPE_PUBLIC_KEY: process.env.STRIPE_PUBLIC_KEY,
+      supabaseUrl: process.env.SUPABASE_URL,
+      supabaseAnonKey: process.env.SUPABASE_ANON_KEY
     }
   },
 
