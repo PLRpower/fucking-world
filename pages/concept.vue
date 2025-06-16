@@ -2,8 +2,8 @@
 useSeoMeta({
   title: "F*cking World - Dress code",
   ogTitle: "F*cking World - Dress code",
-  description: 'Bienvenue ou là où tout est possible, où tout est F*cking World !',
-  ogDescription: 'Bienvenue ou là où tout est possible, où tout est F*cking World !',
+  description: 'Bienvenue là où tout est possible, où tout est F*cking World !',
+  ogDescription: 'Bienvenue là où tout est possible, où tout est F*cking World !',
   ogImage: '',
   twitterCard: 'summary_large_image',
 })
@@ -15,7 +15,7 @@ useSeoMeta({
   <div class="text-center mb-16 max-w-screen-lg mx-auto bg-black">
     <h1 class="font-variant text-3xl lg:text-6xl mb-8" data-aos="fade-up" data-aos-delay="100">Le concept</h1>
     <p class="font-neutral-700 md:text-xl lg:text-2xl mb-16" data-aos="fade-up" data-aos-delay="200">
-      Bienvenue ou là où tout est possible, où tout est F*cking World !<br>
+      Bienvenue là où tout est possible, où tout est F*cking World !<br>
       Ici, on ne se laisse pas abattre par les crises géopolitiques, les catastrophes climatiques ou les inégalités croissantes ; <span class="text-nowrap">on transforme ces défis en un concept unique :</span>
     </p>
   </div>
@@ -97,7 +97,7 @@ useSeoMeta({
 
   <div class="py-16 text-center">
     <p class="text-7xl font-variant" data-aos="fade-up">Free Entry<span class="text-neutral-400 text-6xl">*</span></p>
-    <p class="mt-2 md:text-lg text-neutral-400" data-aos="fade-up" data-aos-delay="200">*Tout les revenus sont versés aux artistes ainsi qu'à la logistique.</p>
+    <p class="mt-2 md:text-lg text-neutral-400" data-aos="fade-up" data-aos-delay="200">*Tous les revenus sont versés aux artistes ainsi qu'à la logistique.</p>
     <div data-aos="fade-up" data-aos-delay="400">
       <WhiteButton icon="mingcute:ticket-fill" link="/reservation" class="m-auto mt-8 lg:text-xls">
         Get your tickets
